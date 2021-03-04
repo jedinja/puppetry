@@ -5,9 +5,11 @@
 	--col: rgba(255, 255, 255, .65);
 	--blue: #1890ff;
 	--input: #505255;
+	--disabled-back: #111;
 }
 
 .layout-content,
+.layout-content .ant-tabs.ant-tabs-card .ant-tabs-card-bar .ant-tabs-tab,
 .layout-content > .ant-tabs-card > .ant-tabs-content > .ant-tabs-tabpane,
 .ant-table-tbody .ant-table-row-expand-icon-cell,
 .ant-table-content .ant-table-footer,
@@ -20,12 +22,14 @@ td {
 
 .toolbar i,
 .ant-table-tbody i,
-.layout-content .ant-tabs,
 .ant-modal .ant-modal-title,
 .ant-modal .ant-form-item-label > label,
 .ant-modal .markdown,
 .ant-modal .template-helper,
-.ant-modal .ant-collapse > .ant-collapse-item > .ant-collapse-header {
+.ant-modal .ant-collapse > .ant-collapse-item > .ant-collapse-header,
+.ant-checkbox-wrapper span,
+.command-form .ant-form-item,
+.select-group-inline .select-group-inline__label {
 	color: var(--col);
 }
 
@@ -38,7 +42,8 @@ table .ant-table-thead > tr > th,
 .ant-modal .ant-modal-body,
 .ant-modal .ant-modal-footer,
 .ant-modal .ant-collapse,
-.ant-modal .ant-form {
+.ant-modal .ant-form,
+.layout-content .ant-tabs {
 	background: var(--back);
 	color: var(--col);
 }
@@ -79,4 +84,18 @@ table .ant-table-tbody > tr > td {
 	background-color: var(--input);
 	color: var(--col);
 	border-color: var(--my-yellow);
+}
+
+.ant-table-tbody .row-disabled > td {
+	background: var(--disabled-back);
+}
+
+.ant-table-tbody .row-disabled > td:hover {
+        background: var(--back)!important;
+}
+
+.ant-table-tbody i.comment-label {
+	font-size: 16px;
+	color: var(--my-yellow);
+	opacity: 0.6; 
 }
