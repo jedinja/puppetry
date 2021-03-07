@@ -59,6 +59,8 @@ export class AssertNumber extends React.Component {
               <Option value="eq">=</Option>
               <Option value="gt">&gt;</Option>
               <Option value="lt">&lt;</Option>
+              <Option value="gte">&gt;=</Option>
+              <Option value="lte">&lt;=</Option>
             </Select> ) }
           </FormItem>
         </Col>

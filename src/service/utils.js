@@ -10,12 +10,16 @@ export const isEveryValueFalsy = ( obj ) => Object.values( obj ).every( val => !
 export const OPERATOR_MAP = {
   gt: ">",
   lt: "<",
-  eq: "="
+  eq: "=",
+  gte: ">=",
+  lte: "<=",
 };
 
 export const HAS_OPERATOR_MAP = {
   gt: "more than",
   lt: "less than",
+  gte: "more or equal than",
+  lte: "less or equal than",
   eq: ""
 };
 

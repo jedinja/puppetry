@@ -31,7 +31,9 @@ module.exports = function( expect, util ) {
   const OPERATOR_MAP = {
     gt: "> ",
     lt: "< ",
-    eq: ""
+    eq: "",
+    gte: ">= ",
+    lte: "<= ",
   };
 
   /**
@@ -51,6 +53,10 @@ module.exports = function( expect, util ) {
         return a === b;
       case "gt":
         return a > b;
+      case "gte":
+        return a >= b;
+      case "lte":
+        return a <= b;
       default:
         return a < b;
     }
@@ -307,9 +313,7 @@ module.exports = function( expect, util ) {
     toPassCondition( rawReceived, operator, rawValue, expectation, source ) {
       const received = parseInt( rawReceived, 10 ),
             value = parseInt( rawValue, 10 ),
-            pass = operator === "eq"
-              ? received === value
-              : ( operator === "gt" ? received > value : received < value );
+            pass = compare(received, operator, value);
 
       return expectReturn( pass,
         `[${ source }] expected ${ expectation
