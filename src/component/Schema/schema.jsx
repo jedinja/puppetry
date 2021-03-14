@@ -19,6 +19,7 @@ import { runjs } from "./Params/Page/runjs";
 import { debug } from "./Params/Page/debug";
 import { assignVarRemotely } from "./Params/Page/assignVarRemotely";
 import { assignVar } from "./Params/Page/assignVar";
+import { assignTarget } from "./Params/Page/assignTarget";
 import { assertVar } from "./Params/Page/assertVar";
 import { scroll as scrollPage } from "./Params/Page/scroll";
 import { setCookie } from "./Params/Page/setCookie";
@@ -146,6 +147,7 @@ export const schema = {
     debug,
     closeDialog,
     assignVar,
+    assignTarget,
     assignVarRemotely,
     assertTitle,
     assertUrl,
